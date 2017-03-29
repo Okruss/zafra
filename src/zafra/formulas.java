@@ -233,5 +233,4 @@ public class formulas {
         Double ktcn=(ktcb*TonCanBru)/TonCanNet;
         return ktcn;
     }
-    
 }
