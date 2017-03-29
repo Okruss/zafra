@@ -211,4 +211,27 @@ public class formulas {
         return purezaJugMez;
     }
 
+    /*Formulas para el cálculo del KARBE*/
+    
+    public double KARBEtcb(Double PolPorCana, Double EBF, Double FF, Double FP){
+        Double constante=10/99.4;
+        Double Ktcb=PolPorCana*EBF*FF*FP*constante;
+        return Ktcb;
+    }
+    
+    public double FactorFabrica(Double FibraPorCana){
+        Double FF=1.085966-((0.519*FibraPorCana)/(100-FibraPorCana));
+        return FF;
+    }
+    
+    public double FactorPureza(Double PorPurJugMez){
+        Double FP=1.101843*(1.4-(40/PorPurJugMez));
+        return FP;
+    }
+    
+     public double KARBEtcn(Double ktcb, Double TonCanBru, Double TonCanNet){
+        Double ktcn=(ktcb*TonCanBru)/TonCanNet;
+        return ktcn;
+    }
+    
 }
